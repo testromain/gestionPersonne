@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<f:metadata>
+  <f:event type="preRenderView" listener="#{listeClients.loadSClients}"/>
+</f:metadata>
+
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Vos Clients</title>
+</h:head>
+<h:body>
+
+
+<h:form>
+
+<h:dataTable value="#{listeClients.listeClient}" var="client">
+	<h:column>
+		<f:facet name="header">Nom</f:facet>
+		#{client.name}	
+	</h:column>
+
+	<h:column>
+		<f:facet name="header">Prenom</f:facet>
+		#{client.surname}	
+	</h:column>
+	
+	<h:column>
+		<f:facet name="header">N°Compte</f:facet>
+		#{client.account}	
+	</h:column>
+
+</h:dataTable>
+
+<h:commandLink value="Creer client" action ="createClient"/>
+
+</h:form>
+
+
+
+</h:body>
+</html>

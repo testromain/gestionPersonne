@@ -1,0 +1,9 @@
+<Context>
+
+  <Resource name="jdbc/gestion_client_h2" 
+  			auth="Container" type="javax.sql.DataSource"
+               username="sa" password="" 
+               driverClassName="org.h2.Driver"
+               url="jdbc:h2:~/gestion_client;MODE=MySQL"/>
+
+</Context>
